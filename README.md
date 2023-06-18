@@ -25,3 +25,31 @@ open("_imaginedpath/outcomes/nuetral_outcome.txt", "w") { |f|
 Proof of concept for how to use it for creating new prolog conditionals.
 
 [Conditional Creation In Prolog](https://github.com/LWFlouisa/IProlog)
+
+
+## Exponential Complexity
+Simply by adding one more ruleset, you end up with a situation where the amount of new conditionals created outnumbers the original things the programmaer anticipated.
+
+~~~
+# 0 Charlotte Dies            0 Never Dates Player
+# 1 Charlotte Fate Unknown    1 Relationship Is Unknown
+# 2 Charlotte Lives           2 Dates Player
+~~~
+
+~~~ Collumnar Ruleset
+A 0 1 2   1 2 0
+B 2 0 1   2 0 1
+C 1 2 0   0 1 2
+~~~
+
+~~~ Total Results
+Charlotte Dies, Relationship Is Unknown
+Charlotte Fate Unknown, Dates Player
+Charlotte Lives, Never Dates Player
+Charlotte Lives, Dates Player
+Charlotte Dies, Never Dates Player
+Charlotte Fate Unknown, Relationship Is Unknown
+Charlotte Fate Unknown, Never Dates Player
+Charlotte Lives, Relationship Is Unknown
+Charlotte Dies, Dates Player
+~~~
