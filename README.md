@@ -20,3 +20,8 @@ open("_imaginedpath/outcomes/nuetral_outcome.txt", "w") { |f|
   f.puts "#{segment_1} #{segment_2}"
 }
 ~~~
+
+## Spontaneous Prolog Conditional Creation
+Proof of concept for how to use it for creating new prolog conditionals.
+
+[Conditional Creation In Prolog](https://github.com/LWFlouisa/IProlog)
